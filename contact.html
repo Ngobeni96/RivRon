@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | RivRon Electrical Lighting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>RivRon Electrical Lighting</h1>
+      <p>Get In Touch With Us</p>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+  <main class="main">
+    <section class="section">
+      <h2>Contact Us</h2>
+      <p>Have questions or want a free quote? Fill in the form below or use the contact details.</p>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <input type="text" id="name" name="name" placeholder="Your Name" required minlength="2" />
+        <input type="email" id="email" name="email" placeholder="Your Email" required />
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" pattern="^\+?[0-9\s\-]{7,15}$" />
+        <textarea id="message" name="message" placeholder="Your Message" rows="5" required minlength="10"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div id="formMessage" style="margin-top:20px; color:#ff4444;"></div>
+    </section>
+
+    <section class="section alt-section contact-details">
+      <h2>Our Contact Details</h2>
+      <ul>
+        <li><i class="fas fa-phone-alt"></i> Phone: <a href="tel:+27" style="color:#ff4444;">+27 12 345 6789</a></li>
+        <li><i class="fas fa-envelope"></i> Email: <a href="mailto:info@rivron.co.za" style="color:#ff4444;">info@rivron.co.za</a></li>
+        <li><i class="fas fa-map-marker-alt"></i> Address: Ka Hlaneki, Giyani, Limpopo, South Africa</li>
+      </ul>
+
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/rivron" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/rivron" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/rivron" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/rivron" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </section>
+
+    <section class="section alt-section">
+      <h2>Find Us Here</h2>
+      <div style="width:100%; height:300px;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3566.719642394181!2d30.982350815007438!3d-23.38364298471248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ecf45e0b8336cbd%3A0x20a61c8a3c582e9f!2sKa%20Hlaneki%2C%20Giyani%2C%20Limpopo!5e0!3m2!1sen!2sza!4v1691234567890!5m2!1sen!2sza"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="RivRon Electrical Lighting Location - Ka Hlaneki, Giyani"
+        ></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 RivRon Electrical Lighting | Designed by Nsovo Ngobeni</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        formMessage.textContent = 'Please fill in all required fields correctly.';
+        return;
+      }
+
+      formMessage.style.color = 'lightgreen';
+      formMessage.textContent = 'Thank you for your message! We will get back to you shortly.';
+      form.reset();
+    });
+  </script>
+
+  <style>
+    /* Extra styles for contact details & social icons */
+    .contact-details ul {
+      list-style: none;
+      padding: 0;
+      max-width: 400px;
+      margin: 0 auto 30px;
+      color: #eee;
+      font-size: 1.1rem;
+    }
+    .contact-details ul li {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .contact-details ul li i {
+      color: #ff4444;
+      min-width: 20px;
+      font-size: 1.3rem;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+    }
+    .social-icons a {
+      color: #ff4444;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #ff7777;
+    }
+  </style>
+</body>
+</html>
